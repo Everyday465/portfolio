@@ -1,0 +1,27 @@
+.homepage {
+  min-height: 100vh; /* Ensures full height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers content vertically */
+  align-items: center;
+  gap: 25%;
+}
+
+/* First container (content) should stay in center */
+.intro {
+  flex-grow: 1; /* Allows it to take up available space */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Socials should stay at the bottom */
+.socials {
+  padding: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto; /* Pushes it to the bottom */
+  gap: 10%;
+}

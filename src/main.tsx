@@ -1,14 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App.tsx";
-import "./index.css";
+import { RouterProvider } from 'react-router-dom';
+import router from './RouteConfig';
+
 import { Amplify } from "aws-amplify";
 import outputs from "../amplify_outputs.json";
 
 Amplify.configure(outputs);
 
-ReactDOM.createRoot(document.getElementById("root")!).render(
+
+const root = ReactDOM.createRoot(document.getElementById('root')!);
+root.render(
   <React.StrictMode>
-    <App />
+      <RouterProvider router={router} />
   </React.StrictMode>
 );
