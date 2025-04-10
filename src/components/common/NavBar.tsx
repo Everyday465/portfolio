@@ -33,7 +33,7 @@ const NavBar: React.FC = () => {
                         }
                         severity="warning"
                     >
-                        website is working in progress.. last updated 10apr
+                        website is working in progress.. last updated 11apr
                     </Alert>
                 </Collapse>
             </Container>
