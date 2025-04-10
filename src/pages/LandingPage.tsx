@@ -1,7 +1,7 @@
 import React  from 'react';
 import HomePage from './HomePage';
-import AboutMePage from './AboutMePage';
-import RecentProjectPage from './ProjectPage';
+import AboutMeSection from './AboutMeSection';
+import RecentProjectSection from './ProjectSection';
 
 
 
@@ -10,8 +10,8 @@ const LandingPage: React.FC = () => {
     return (
         <>
         <HomePage/>
-        <AboutMePage/>
-        <RecentProjectPage/>
+        <AboutMeSection/>
+        <RecentProjectSection/>
         </>
        
     );

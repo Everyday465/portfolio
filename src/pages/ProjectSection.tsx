@@ -1,17 +1,18 @@
 import { Box, Container } from '@mui/material';
-import React  from 'react';
-import './projectpage.css'
+import React from 'react';
+import './projectsection.css'
 
 
 
 const LandingPage: React.FC = () => {
-    
+
     return (
         <Box>
             <Container className='recent-projects'>
                 <h1>projects</h1>
                 <Container className="project-list">
-                    <Container className='project-card'>
+                    <Container
+                        className="project-card">           
                         <img src='./'></img>
                         <div>Enterprise Cloud Project - OceanEyes (Online Therapy)</div>
                         <div></div>
@@ -27,13 +28,13 @@ const LandingPage: React.FC = () => {
                         <div></div>
                     </Container>
                 </Container>
-            
-            
+
+
             </Container>
 
 
         </Box>
-       
+
     );
 };
 

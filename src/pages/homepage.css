@@ -25,3 +25,40 @@
   margin-top: auto; /* Pushes it to the bottom */
   gap: 10%;
 }
+
+/* Styling for the name */
+.intro .name {
+  font-size: 60px;
+  font-weight: bolder;
+}
+
+/* Styling for the title */
+.intro .title {
+  font-size: 30px;
+  font-weight: bolder;
+  color: #757575;
+}
+
+/* Styling for the location */
+.intro .location {
+  font-size: 24px;
+  font-weight: bolder;
+  display: flex;
+  align-items: center;
+}
+
+.intro .location span {
+  margin-left: 5px;
+}
+
+/* Social media icons */
+.socials a {
+  display: inline-block;
+}
+
+/* Styling for social icons */
+.socials .icon {
+  font-size: 30px;
+  color: black;
+  margin-right: 10px;
+}

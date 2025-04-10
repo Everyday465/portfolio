@@ -1,0 +1,24 @@
+.recent-projects{
+    margin-bottom: 5%;
+}
+
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.project-card {
+    border: 1px solid #e0e0e0;
+    width: 500px;
+    height: 200px;
+    border-radius: 8px;
+    padding: 4px;
+    background-color: #ffffff;
+    transition: all 0.3s ease; /* Smooth transition */
+  }
+  
+  .project-card:hover {
+    transform: scale(1.05); /* Pop-up effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  }
