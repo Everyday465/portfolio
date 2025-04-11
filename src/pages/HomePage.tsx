@@ -11,11 +11,6 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 
 const HomePage: React.FC = () => {
 
-
-
-  // Downloads file content to memory
-
-
   const downloadResume = async () => {
     try {
       const { body} = await downloadData({
@@ -43,9 +38,9 @@ const HomePage: React.FC = () => {
     <Box className="homepage" id="home">
       <Container className="intro">
         <div>
-          <div className="name">Elijah Agnote</div>
-          <div className="title">Web Developer</div>
-          <div className="location">
+          <div className="name slide-in">Elijah Agnote</div>
+          <div className="title slide-in">Developer</div>
+          <div className="location slide-in">
             <LocationOnIcon style={{ marginRight: '5px' }} />
             <span>Singapore</span>
           </div>
@@ -53,19 +48,19 @@ const HomePage: React.FC = () => {
       </Container>
 
       <Container className="socials">
-        <a href="https://www.linkedin.com/in/elijah-agnote-1008712bb" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+        <a className="slide-in" href="https://www.linkedin.com/in/elijah-agnote-1008712bb" target="_blank" rel="noopener noreferrer" title="LinkedIn">
           <LinkedInIcon className="icon" />
         </a>
 
-        <a href="https://github.com/Everyday465" target="_blank" rel="noopener noreferrer" title="Github">
+        <a className="slide-in" href="https://github.com/Everyday465" target="_blank" rel="noopener noreferrer" title="Github">
           <GitHubIcon className="icon" />
         </a>
 
-        <a href="mailto:agnoteelijah@gmail.com" title="Email">
+        <a className="slide-in" href="mailto:agnoteelijah@gmail.com" title="Email">
           <EmailIcon className="icon" />
         </a>
 
-        <a onClick={downloadResume} title="Download Resume">
+        <a className="slide-in" onClick={downloadResume} title="Download Resume">
           <DescriptionIcon className="icon" />
         </a>
       </Container>

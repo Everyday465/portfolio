@@ -5,16 +5,17 @@ import "./aboutmesection.css";
 import LaptopMacIcon from '@mui/icons-material/LaptopMac';
 
 import { Timeline, TimelineItem, TimelineSeparator, TimelineConnector, TimelineContent, TimelineOppositeContent, TimelineDot } from '@mui/lab';
+import { StorageImage } from '@aws-amplify/ui-react-storage';
 
 const AboutMePage: React.FC = () => {
     const [items] = useState<any[]>([
-        { name: "HTML5/CSS", icon: <img src='../../public/file-type-html.svg'></img> },
-        { name: "React", icon: <img src='../../public/react.svg'></img> },
-        { name: "TypeScript", icon: <img src='../../public/typescript-icon.svg'></img> },
-        { name: "Python", icon: <img src='../../public/python.svg'></img> },
-        { name: "C#", icon: <img src='../../public/c-sharp-c.svg'></img> },
-        { name: "AWS Cloud Services", icon: <img src='../../public/aws.svg'></img> },
-        { name: "MySQL", icon: <img src='../../public/mysql-original-wordmark.svg'></img> }
+        { name: "HTML5/CSS", icon: <StorageImage alt="" path="uploads/file-type-html.svg" />},
+        { name: "React", icon:  <StorageImage alt="" path="uploads/react.svg" />},
+        { name: "TypeScript", icon:  <StorageImage alt="" path="uploads/typescript-icon.svg" /> },
+        { name: "Python", icon:  <StorageImage alt="" path="uploads/python.svg" />},
+        { name: "C#", icon:  <StorageImage alt="" path="uploads/c-sharp-c.svg" />},
+        { name: "AWS Cloud Services", icon: <StorageImage alt="" path="uploads/aws.svg" />},
+        { name: "MySQL", icon:  <StorageImage alt="" path="uploads/mysql-original-wordmark.svg" />}
     ]);
 
     return (
