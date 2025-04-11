@@ -62,3 +62,7 @@
   color: black;
   margin-right: 10px;
 }
+
+.icon {
+  cursor: pointer;
+}

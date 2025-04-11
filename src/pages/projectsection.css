@@ -26,6 +26,13 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+.project-thumbnail {
+  width: 100%;
+  height: 100px; /* Adjust based on your card size */
+  object-fit: cover; /* Ensures it fills the box and crops if needed */
+  border-radius: 6px;
+}
+
 .custom-modal-overlay {
   position: fixed;
   top: 0;
@@ -60,4 +67,13 @@
 @keyframes fadeIn {
   from { opacity: 0; transform: scale(0.9); }
   to { opacity: 1; transform: scale(1); }
+}
+
+.custom-modal-content::-webkit-scrollbar {
+  display: none;
+}
+
+.custom-modal-content {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

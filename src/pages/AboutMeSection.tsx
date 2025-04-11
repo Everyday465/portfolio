@@ -1,39 +1,31 @@
 import { Box, Container, Typography } from '@mui/material';
 import React, { useState } from 'react';
 import "./aboutmesection.css";
-import HtmlIcon from '@mui/icons-material/Html';
 
-import ReactIcon from '@mui/icons-material/Code';
-import TypeScriptIcon from '@mui/icons-material/Code';
-import PythonIcon from '@mui/icons-material/Code';
-import CloudIcon from '@mui/icons-material/Cloud';
-import SqlIcon from '@mui/icons-material/Storage';
 import LaptopMacIcon from '@mui/icons-material/LaptopMac';
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPython } from '@fortawesome/free-brands-svg-icons';
 
 import { Timeline, TimelineItem, TimelineSeparator, TimelineConnector, TimelineContent, TimelineOppositeContent, TimelineDot } from '@mui/lab';
 
 const AboutMePage: React.FC = () => {
     const [items] = useState<any[]>([
-        { name: "HTML5/CSS", icon: <HtmlIcon /> },
-        { name: "React", icon: <ReactIcon /> },
-        { name: "TypeScript", icon: <TypeScriptIcon /> },
-        { name: "Python", icon: <FontAwesomeIcon icon={faPython} style={{color: "#FFD43B", }} size="xl" /> },
-        { name: "C#", icon: <PythonIcon /> },
-        { name: "AWS Cloud Services", icon: <CloudIcon /> },
-        { name: "MySQL", icon: <SqlIcon /> }
+        { name: "HTML5/CSS", icon: <img src='../../public/file-type-html.svg'></img> },
+        { name: "React", icon: <img src='../../public/react.svg'></img> },
+        { name: "TypeScript", icon: <img src='../../public/typescript-icon.svg'></img> },
+        { name: "Python", icon: <img src='../../public/python.svg'></img> },
+        { name: "C#", icon: <img src='../../public/c-sharp-c.svg'></img> },
+        { name: "AWS Cloud Services", icon: <img src='../../public/aws.svg'></img> },
+        { name: "MySQL", icon: <img src='../../public/mysql-original-wordmark.svg'></img> }
     ]);
 
     return (
-        <Box className="about-me">
+        <Box className="about-me" id="about">
             <Container className='tech-stack'>
                 <h1 id='heading'>tech stack</h1>
                 <Container className='content'>
                     {items.map((item, index) => (
                         <div key={index} className="tech-stack-item">
-                            {item.icon} {item.name}
+                            <div className="tech-icon-wrapper">{item.icon}</div>
+                            <span>{item.name}</span>
                         </div>
                     ))}
                 </Container>

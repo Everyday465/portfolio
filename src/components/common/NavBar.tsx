@@ -7,13 +7,26 @@ import "./navbar.css"
 const NavBar: React.FC = () => {
     const [open, setOpen] = React.useState(true);
 
+    const scrollToSection = (id: string) => {
+        const section = document.getElementById(id);
+        if (section) {
+            section.scrollIntoView({ behavior: "smooth" });
+        }
+    };
+
     return (
         <Box className="navbar">
 
             <Container className="navbar-content">
-                <div>home</div>
-                <div>about me</div>
-                <div>projects</div>
+                <div onClick={() => scrollToSection("home")}>home</div>
+                <div
+                    onClick={() => alert("The 'About Me' section is still under construction.")}
+                    style={{ textDecoration: 'line-through', cursor: 'not-allowed', color: 'gray' }}
+                >
+                    about me
+                </div>
+
+                <div onClick={() => scrollToSection("projects")}>projects</div>
             </Container>
             <Container className='alert'>
                 <Collapse in={open}>

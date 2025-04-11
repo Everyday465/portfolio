@@ -34,22 +34,22 @@ const ProjectSection: React.FC = () => {
     };
 
     return (
-        <Box>
+        <Box id="projects">
             <Container className='recent-projects'>
-                <h1>projects</h1>
+                <h1>projects (click me)</h1>
                 <Container className="project-list">
                     <Box className="project-card" onClick={() => openModal('uploads/ecp-demo.mp4', 'OceanEyes')}>
-                        <StorageImage alt="" path="uploads/ecp-demo-thumbnail.png" />
+                        <StorageImage className="project-thumbnail" alt="" path="uploads/ecp-demo-thumbnail.png" />
                         <div>Enterprise Cloud Project - OceanEyes</div>
                         <div>AWS cloud powered online therapy business use case</div>
                     </Box>
                     <Box className="project-card" onClick={() => openModal('uploads/lost-found-demo.mp4', 'Lost & Found')}>
-                        <StorageImage alt="" path="uploads/lost-found-demo-thumbnail.png" />
+                        <StorageImage className="project-thumbnail" alt="" path="uploads/lost-found-demo-thumbnail.png" />
                         <div>NYP Lost & Found Cloud Website</div>
                         <div>AWS cloud powered student lost & found use case</div>
                     </Box>
                     <Box className="project-card" onClick={() => openModal('uploads/uplay-demo.mp4', 'UPlay')}>
-                        <StorageImage alt="" path="uploads/uplay-demo-thumbnail.png" />
+                        <StorageImage className="project-thumbnail" alt="" path="uploads/uplay-demo-thumbnail.png" />
                         <div>NTUC UPlay Website (Online Event Marketplace)</div>
                         <div>C# powered</div>
                     </Box>
@@ -59,7 +59,7 @@ const ProjectSection: React.FC = () => {
             {showModal && (
                 <Box className="custom-modal-overlay" onClick={closeModal}>
                     <Box className="custom-modal-content" onClick={(e) => e.stopPropagation()}>
-                        <h2>{modalTitle}</h2>
+                        
                         {hasVideo ? (
                             videoUrl ? (
                                 <video controls width="100%">
@@ -72,6 +72,7 @@ const ProjectSection: React.FC = () => {
                         ) : (
                             <p>No video available for this project.</p>
                         )}
+                        <h2>{modalTitle}</h2>
                     </Box>
                 </Box>
             )}
