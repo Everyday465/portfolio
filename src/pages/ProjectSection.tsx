@@ -41,24 +41,29 @@ const ProjectSection: React.FC = () => {
                     <Box className="project-card" onClick={() => openModal('uploads/ecp-demo.mp4', 'OceanEyes')}>
                         <StorageImage className="project-thumbnail" alt="" path="uploads/ecp-demo-thumbnail.png" />
                         <div>Enterprise Cloud Project - OceanEyes</div>
-                        <div>AWS cloud powered online therapy business use case</div>
+                        <div className='description'>AWS cloud powered online therapy business use case</div>
                     </Box>
                     <Box className="project-card" onClick={() => openModal('uploads/lost-found-demo.mp4', 'Lost & Found')}>
                         <StorageImage className="project-thumbnail" alt="" path="uploads/lost-found-demo-thumbnail.png" />
                         <div>NYP Lost & Found Cloud Website</div>
-                        <div>AWS cloud powered student lost & found use case</div>
+                        <div className='description'>AWS cloud powered student lost & found use case</div>
                     </Box>
-                    <Box className="project-card" onClick={() => openModal('uploads/uplay-demo.mp4', 'UPlay')}>
-                        <StorageImage className="project-thumbnail" alt="" path="uploads/uplay-demo-thumbnail.png" />
+                    <Box className="project-card" onClick={() => openModal('uploads/404image.png', 'UPlay')}>
+                        <StorageImage className="project-thumbnail" alt="" path="uploads/404image.png" />
                         <div>NTUC UPlay Website (Online Event Marketplace)</div>
-                        <div>C# powered</div>
+                        <div className='description'>C# powered with MySQL database</div>
+                    </Box>
+                    <Box className="project-card" onClick={() => openModal('uploads/404image.png', 'RedSG')}>
+                        <StorageImage className="project-thumbnail" alt="" path="uploads/404image.png" />
+                        <div>Enterprise Development Project - RedSg (Car Rental)    </div>
+                        <div className='description'>Javascript powered with MySQL database</div>
                     </Box>
                 </Container>
             </Container>
 
             {showModal && (
                 <Box className="custom-modal-overlay" onClick={closeModal}>
-                    <Box className="custom-modal-content" onClick={(e) => e.stopPropagation()}>
+                    <Box className="custom-modal-content fade-in" onClick={(e) => e.stopPropagation()}>
                         
                         {hasVideo ? (
                             videoUrl ? (

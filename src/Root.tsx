@@ -10,23 +10,25 @@ import NavBar from './components/common/NavBar';
 //import { GoogleSSOProvider } from './contexts/GoogleSSOContext';
 
 
+
 function Root() {
 
 
     const theme = createTheme({
         typography: {
-            fontFamily: 'Poppins, Roboto, sans-serif'
+            fontFamily: 'Inter, Poppins, Roboto, sans-serif'
         },
         components: {
             MuiCssBaseline: {
                 styleOverrides: {
                     body: {
-                        fontFamily: 'Poppins, Roboto, sans-serif',
+                        fontFamily: 'Inter, Poppins, Roboto, sans-serif',
                     }
                 }
             }
         },
     });
+    
 
     return (
         <>

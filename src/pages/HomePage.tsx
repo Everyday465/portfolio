@@ -36,6 +36,7 @@ const HomePage: React.FC = () => {
 
   return (
     <Box className="homepage" id="home">
+             
       <Container className="intro">
         <div>
           <div className="name slide-in">

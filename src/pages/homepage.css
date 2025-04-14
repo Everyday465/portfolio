@@ -5,6 +5,7 @@
   justify-content: center; /* Centers content vertically */
   align-items: center;
   gap: 25%;
+  
 }
 
 /* First container (content) should stay in center */
@@ -17,8 +18,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* view-timeline-name: --intro-section;
-  view-timeline-axis: block; */
 }
 
 
@@ -88,7 +87,7 @@
 /* Shared animation style */
 .slide-in {
   opacity: 0;
-  animation: slideIn 0.6s forwards;
+  animation: slideIn 1.2s forwards;
 }
 
 /* Add delays for staggered effect */
@@ -104,29 +103,14 @@
   animation-delay: 0.5s;
 }
 
-.socials a:nth-child(1) .icon {
-  animation-delay: 0.7s;
+  
+.homepage  {
+  animation: fade-in ease-in-out;
+  animation-timeline:view(-100px);
 }
 
-.socials a:nth-child(2) .icon {
-  animation-delay: 0.9s;
-}
 
-.socials a:nth-child(3) .icon {
-  animation-delay: 1.1s;
-}
-
-.socials a:nth-child(4) .icon {
-  animation-delay: 1.3s;
-}
-
-/* Apply base animation class to all slide-ins */
-.name, .title, .location{
-  animation: slideIn 0.6s forwards;
-  opacity: 0;
-}
-
- .socials .icon {
-  animation: slideIn 0.6s forwards;
-  opacity: 0;
+@keyframes fade-in {
+  60% {scale: 1; opacity: 1;}
+  100% {scale:0; opacity: 0;}
 }

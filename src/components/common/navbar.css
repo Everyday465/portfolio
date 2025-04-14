@@ -37,19 +37,3 @@
     width: 100%;
 }
 
-.scroll-watcher {
-    height: 10px;
-    position: absolute;
-    top:100;
-    z-index:1000;
-    background-color: limegreen;
-    width:100%;
-    scale:0 1;
-    transform-origin: left;
-    animation: scroll-watcher linear;
-    animation-timeline: scroll();
-}
-
-@keyframes scroll-watcher {
-    to { scale: 1 1;}
-}

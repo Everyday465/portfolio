@@ -19,7 +19,7 @@ const NavBar: React.FC = () => {
 
 
             <Container className="navbar-content">
-                <div className="scroll-watcher"></div>
+                
                 <div onClick={() => scrollToSection("home")}>homes</div>
                 <div
                     onClick={() => alert("The 'About Me' section is still under construction.")}
@@ -48,7 +48,7 @@ const NavBar: React.FC = () => {
                         }
                         severity="warning"
                     >
-                        website is working in progress.. last updated 11apr
+                        website is working in progress.. last updated 14apr
                     </Alert>
                 </Collapse>
             </Container>
