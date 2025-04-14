@@ -17,8 +17,10 @@ const NavBar: React.FC = () => {
     return (
         <Box className="navbar">
 
+
             <Container className="navbar-content">
-                <div onClick={() => scrollToSection("home")}>home</div>
+                <div className="scroll-watcher"></div>
+                <div onClick={() => scrollToSection("home")}>homes</div>
                 <div
                     onClick={() => alert("The 'About Me' section is still under construction.")}
                     style={{ textDecoration: 'line-through', cursor: 'not-allowed', color: 'gray' }}

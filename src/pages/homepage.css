@@ -9,12 +9,18 @@
 
 /* First container (content) should stay in center */
 .intro {
+  position: relative;
+  height: 50vh;
+  overflow: hidden;
   flex-grow: 1; /* Allows it to take up available space */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  /* view-timeline-name: --intro-section;
+  view-timeline-axis: block; */
 }
+
 
 /* Socials should stay at the bottom */
 .socials {
@@ -69,11 +75,11 @@
 
 /* Keyframes for slide-in animation */
 @keyframes slideIn {
-  from {
+  0% {
     opacity: 0;
     transform: translateY(20px);
   }
-  to {
+  100% {
     opacity: 1;
     transform: translateY(0);
   }

@@ -13,7 +13,7 @@ const HomePage: React.FC = () => {
 
   const downloadResume = async () => {
     try {
-      const { body} = await downloadData({
+      const { body } = await downloadData({
         path: "uploads/ELIJAH AGNOTE CV.pdf", // <-- replace with your actual file path
       }).result;
 
@@ -38,8 +38,10 @@ const HomePage: React.FC = () => {
     <Box className="homepage" id="home">
       <Container className="intro">
         <div>
-          <div className="name slide-in">Elijah Agnote</div>
-          <div className="title slide-in">Developer</div>
+          <div className="name slide-in">
+            Elijah Agnote
+          </div>
+          <div className="title slide-in" >Developer</div>
           <div className="location slide-in">
             <LocationOnIcon style={{ marginRight: '5px' }} />
             <span>Singapore</span>

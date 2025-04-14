@@ -126,11 +126,11 @@ const AboutMePage: React.FC = () => {
                             </TimelineDot>
                             <TimelineConnector />
                         </TimelineSeparator>
-                        <TimelineContent sx={{ py: '12px', px: 2 }}>
-                            <Typography variant="h6" component="span">
+                        <TimelineContent sx={{ py: '12px', px: 2 ,}}>
+                            <Typography variant="h6" component="span" >
                                 Hackathon, SDG Open Hack 2024
                             </Typography>
-                            <Typography>
+                            <Typography >
                                 Collaborated in a team of 4 to pitch an online mental health solution aligned with SDG 17, developing a wireframe and presenting a practical, research-backed idea. Reached the grand finals and placed top 3 in the qualifying rounds.
                             </Typography>
                         </TimelineContent>

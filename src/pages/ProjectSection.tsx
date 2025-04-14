@@ -1,7 +1,6 @@
 import { Box, Container } from '@mui/material';
 import React, { useState } from 'react';
 import { StorageImage } from '@aws-amplify/ui-react-storage';
-import { getUrl } from 'aws-amplify/storage';
 import './projectsection.css';
 
 const ProjectSection: React.FC = () => {
@@ -12,8 +11,9 @@ const ProjectSection: React.FC = () => {
 
     const openModal = async (videoPath: string, title: string) => {
         try {
-            const { url } = await getUrl({ path: videoPath });
-            setVideoUrl(url.toString());
+            const url  = "https://d29c12qdaotyyt.cloudfront.net/"+videoPath
+            setVideoUrl(url);
+            console.log(url)
             setModalTitle(title);
             setHasVideo(true); // ✅ Reset
             setShowModal(true);
