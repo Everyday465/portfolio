@@ -7,15 +7,17 @@ const ProjectSection: React.FC = () => {
     const [showModal, setShowModal] = useState(false);
     const [videoUrl, setVideoUrl] = useState('');
     const [modalTitle, setModalTitle] = useState('');
-    const [hasVideo, setHasVideo] = useState(true); // ✅ Track if video exists
+    const [hasVideo, setHasVideo] = useState(false); // ✅ Track if video exists
 
     const openModal = async (videoPath: string, title: string) => {
         try {
-            const url  = "https://d29c12qdaotyyt.cloudfront.net/"+videoPath
-            setVideoUrl(url);
-            console.log(url)
+            setHasVideo(false)
+            if (videoPath != '') {
+                const url = "https://d29c12qdaotyyt.cloudfront.net/" + videoPath
+                setVideoUrl(url);
+                setHasVideo(true); 
+            }
             setModalTitle(title);
-            setHasVideo(true); // ✅ Reset
             setShowModal(true);
         } catch (err) {
             console.error('Failed to load video', err);
@@ -38,22 +40,22 @@ const ProjectSection: React.FC = () => {
             <Container className='recent-projects'>
                 <h1>projects (click me)</h1>
                 <Container className="project-list">
-                    <Box className="project-card" onClick={() => openModal('uploads/ecp-demo.mp4', 'OceanEyes')}>
+                    <Box className="project-card" onClick={() => openModal('encoded_files/ecp-demo.mp4', 'OceanEyes')}>
                         <StorageImage className="project-thumbnail" alt="" path="uploads/ecp-demo-thumbnail.png" />
                         <div>Enterprise Cloud Project - OceanEyes</div>
                         <div className='description'>AWS cloud powered online therapy business use case</div>
                     </Box>
-                    <Box className="project-card" onClick={() => openModal('uploads/lost-found-demo.mp4', 'Lost & Found')}>
+                    <Box className="project-card" onClick={() => openModal('encoded_files/lost-found-demo.mp4', 'Lost & Found')}>
                         <StorageImage className="project-thumbnail" alt="" path="uploads/lost-found-demo-thumbnail.png" />
                         <div>NYP Lost & Found Cloud Website</div>
                         <div className='description'>AWS cloud powered student lost & found use case</div>
                     </Box>
-                    <Box className="project-card" onClick={() => openModal('uploads/404image.png', 'UPlay')}>
+                    <Box className="project-card" onClick={() => openModal('', 'UPlay')}>
                         <StorageImage className="project-thumbnail" alt="" path="uploads/404image.png" />
                         <div>NTUC UPlay Website (Online Event Marketplace)</div>
                         <div className='description'>C# powered with MySQL database</div>
                     </Box>
-                    <Box className="project-card" onClick={() => openModal('uploads/404image.png', 'RedSG')}>
+                    <Box className="project-card" onClick={() => openModal('', 'RedSG')}>
                         <StorageImage className="project-thumbnail" alt="" path="uploads/404image.png" />
                         <div>Enterprise Development Project - RedSg (Car Rental)    </div>
                         <div className='description'>Javascript powered with MySQL database</div>
@@ -64,7 +66,7 @@ const ProjectSection: React.FC = () => {
             {showModal && (
                 <Box className="custom-modal-overlay" onClick={closeModal}>
                     <Box className="custom-modal-content fade-in" onClick={(e) => e.stopPropagation()}>
-                        
+
                         {hasVideo ? (
                             videoUrl ? (
                                 <video controls width="100%">
