@@ -40,6 +40,7 @@ const ProjectSection: React.FC = () => {
             <Container className='recent-projects'>
                 <h1>projects (click me)</h1>
                 <Container className="project-list">
+                    
                     <Box className="project-card" onClick={() => openModal('encoded_files/ecp-demo.mp4', 'OceanEyes')}>
                         <StorageImage className="project-thumbnail" alt="" path="uploads/ecp-demo-thumbnail.png" />
                         <div>Enterprise Cloud Project - OceanEyes</div>
@@ -59,6 +60,11 @@ const ProjectSection: React.FC = () => {
                         <StorageImage className="project-thumbnail" alt="" path="uploads/404image.png" />
                         <div>Enterprise Development Project - RedSg (Car Rental)    </div>
                         <div className='description'>Javascript powered with MySQL database</div>
+                    </Box>
+                    <Box className="project-card" onClick={() => window.location.href = 'https://sudoku-app-latest.onrender.com'}>
+                        <StorageImage className="project-thumbnail" alt="" path="uploads/sudoku.png" />
+                        <div>Sudoku</div>
+                        <div className='description'>Used Nodejs to make Sudoku with session persistent data </div>
                     </Box>
                 </Container>
             </Container>
