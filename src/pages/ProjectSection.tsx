@@ -66,6 +66,11 @@ const ProjectSection: React.FC = () => {
                         <div>Sudoku</div>
                         <div className='description'>Used Nodejs to make Sudoku with session persistent data </div>
                     </Box>
+                    <Box className="project-card" onClick={() => window.location.href = 'https://emailsender-latest.onrender.com'}>
+                        <StorageImage className="project-thumbnail" alt="" path="uploads/emailsender.png" />
+                        <div>Send Email</div>
+                        <div className='description'>Send multiple emails at once. Used session so to not save app password in database & cryptography for encryption at rest.</div>
+                    </Box>
                 </Container>
             </Container>
 

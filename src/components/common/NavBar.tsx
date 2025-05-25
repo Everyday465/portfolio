@@ -1,11 +1,12 @@
-import { Alert, Box, Collapse, Container, IconButton } from '@mui/material';
-import CloseIcon from '@mui/icons-material/Close';
+import { Box, Container, } from '@mui/material';
+//import { Alert, Box, Collapse, Container, IconButton } from '@mui/material';
+//import CloseIcon from '@mui/icons-material/Close';
 
 import React from 'react';
 import "./navbar.css"
 
 const NavBar: React.FC = () => {
-    const [open, setOpen] = React.useState(true);
+    //const [open, setOpen] = React.useState(true);
 
     const scrollToSection = (id: string) => {
         const section = document.getElementById(id);
@@ -30,6 +31,8 @@ const NavBar: React.FC = () => {
 
                 <div onClick={() => scrollToSection("projects")}>projects</div>
             </Container>
+
+            {/*
             <Container className='alert'>
                 <Collapse in={open}>
                     <Alert
@@ -52,6 +55,8 @@ const NavBar: React.FC = () => {
                     </Alert>
                 </Collapse>
             </Container>
+            
+            */}
 
         </Box>
     );

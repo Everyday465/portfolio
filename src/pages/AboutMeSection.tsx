@@ -9,13 +9,13 @@ import { StorageImage } from '@aws-amplify/ui-react-storage';
 
 const AboutMePage: React.FC = () => {
     const [items] = useState<any[]>([
-        { name: "HTML5/CSS", icon: <StorageImage alt="" path="uploads/file-type-html.svg" />},
-        { name: "React", icon:  <StorageImage alt="" path="uploads/react.svg" />},
-        { name: "TypeScript", icon:  <StorageImage alt="" path="uploads/typescript-icon.svg" /> },
-        { name: "Python", icon:  <StorageImage alt="" path="uploads/python.svg" />},
-        { name: "C#", icon:  <StorageImage alt="" path="uploads/c-sharp-c.svg" />},
-        { name: "AWS Cloud Services", icon: <StorageImage alt="" path="uploads/aws.svg" />},
-        { name: "MySQL", icon:  <StorageImage alt="" path="uploads/mysql-original-wordmark.svg" />}
+        { name: "HTML5/CSS", icon: <StorageImage alt="" path="uploads/file-type-html.svg" /> },
+        { name: "React", icon: <StorageImage alt="" path="uploads/react.svg" /> },
+        { name: "TypeScript", icon: <StorageImage alt="" path="uploads/typescript-icon.svg" /> },
+        { name: "Python", icon: <StorageImage alt="" path="uploads/python.svg" /> },
+        { name: "C#", icon: <StorageImage alt="" path="uploads/c-sharp-c.svg" /> },
+        { name: "AWS Cloud Services", icon: <StorageImage alt="" path="uploads/aws.svg" /> },
+        { name: "MySQL", icon: <StorageImage alt="" path="uploads/mysql-original-wordmark.svg" /> }
     ]);
 
     return (
@@ -37,7 +37,7 @@ const AboutMePage: React.FC = () => {
                 <Timeline position="alternate">
                     <TimelineItem >
                         <TimelineOppositeContent
-                        className='slide-in-left'
+                            className='slide-in-left'
                             sx={{ m: 'auto 0' }}
                             align="right"
                             variant="body2"
@@ -57,7 +57,7 @@ const AboutMePage: React.FC = () => {
                                 Hackathon, NUS HumanITy 2025
                             </Typography>
                             <Typography className="description">
-                            still on going
+                                Participated and pitched our OceanEyes Cloud Solution. Our entry: https://youtu.be/w6GeJvl0-BU?si=9Qdkrf0NkV5PsdVC
                             </Typography>
                         </TimelineContent>
                     </TimelineItem>
@@ -70,7 +70,7 @@ const AboutMePage: React.FC = () => {
                             color="text.secondary"
                             className='slide-in-right'
                         >
-                            Mar 2024 - May 2024
+                            Nov 2024
                         </TimelineOppositeContent>
                         <TimelineSeparator>
                             <TimelineConnector />
@@ -81,17 +81,17 @@ const AboutMePage: React.FC = () => {
                         </TimelineSeparator>
                         <TimelineContent className='slide-in-left' sx={{ py: '12px', px: 2 }}>
                             <Typography variant="h6" component="span">
-                                Internship, Shaw Organisation
+                                Hackathon, SDG Open Hack 2024
                             </Typography>
                             <Typography className="description">
-                                Learned Java fundamentals with a focus on OOP and unit testing. Contributed to in-house system design using Figma and documented workflows in Confluence for consistency and clarity.
+                                Collaborated in a team of 4 to pitch an online mental health solution aligned with SDG 17, developing a wireframe and presenting a practical, research-backed idea. Reached the grand finals and placed top 3 in the qualifying rounds.
                             </Typography>
                         </TimelineContent>
                     </TimelineItem>
 
                     <TimelineItem >
                         <TimelineOppositeContent
-                        className='slide-in-left'
+                            className='slide-in-left'
                             sx={{ m: 'auto 0' }}
                             variant="body2"
                             color="text.secondary"
@@ -121,7 +121,7 @@ const AboutMePage: React.FC = () => {
                             variant="body2"
                             color="text.secondary"
                         >
-                            Nov 2024
+                            Mar 2024 - May 2024
                         </TimelineOppositeContent>
                         <TimelineSeparator>
                             <TimelineConnector />
@@ -130,18 +130,18 @@ const AboutMePage: React.FC = () => {
                             </TimelineDot>
                             <TimelineConnector />
                         </TimelineSeparator>
-                        <TimelineContent className='slide-in-left' sx={{ py: '12px', px: 2 ,}}>
+                        <TimelineContent className='slide-in-left' sx={{ py: '12px', px: 2, }}>
                             <Typography variant="h6" component="span" >
-                                Hackathon, SDG Open Hack 2024
+                                Internship, Shaw Organisation
                             </Typography>
                             <Typography className="description">
-                                Collaborated in a team of 4 to pitch an online mental health solution aligned with SDG 17, developing a wireframe and presenting a practical, research-backed idea. Reached the grand finals and placed top 3 in the qualifying rounds.
+                                Learned Java fundamentals with a focus on OOP and unit testing. Contributed to in-house system design using Figma and documented workflows in Confluence for consistency and clarity.
                             </Typography>
                         </TimelineContent>
                     </TimelineItem>
                     <TimelineItem   >
                         <TimelineOppositeContent
-                        className='slide-in-left'
+                            className='slide-in-left'
                             sx={{ m: 'auto 0' }}
                             variant="body2"
                             color="text.secondary"
@@ -155,7 +155,7 @@ const AboutMePage: React.FC = () => {
                             </TimelineDot>
                             <TimelineConnector />
                         </TimelineSeparator>
-                        <TimelineContent className='slide-in-right'   sx={{ py: '12px', px: 2 }}>
+                        <TimelineContent className='slide-in-right' sx={{ py: '12px', px: 2 }}>
                             <Typography variant="h6" component="span">
                                 Hackathon, Code Overflow Hackathon 2023
                             </Typography>
